@@ -1,0 +1,9 @@
+.Container {
+    flex-direction: column;
+    height: 100vh;
+    background-color: blue;
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: 40%;
+}
