@@ -1,0 +1,21 @@
+.InputElement {
+    font: inherit;
+    padding: 6px 10px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.TextInput {
+    display: block;
+    min-width: 50rem;
+}
+
+.Invalid {
+    border: 1px solid red;
+    background-color: #FDA49A;
+}
+
+.Container {
+
+}
