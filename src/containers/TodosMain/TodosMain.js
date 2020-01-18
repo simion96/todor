@@ -13,27 +13,29 @@ class TodosMain extends Component {
     }
 
     onKeyPressHandler = (e) => {
-        console.log(e.target.value);
         if (e.key === 'Enter') {
             alert('adding');
             this.props.onTaskAdded(e.target.value);
+            e.target.value = "";
         }
     }
 
     render () {
+        const taskList = this.props.tasks.map((task, idx) => {
+            return (
+                    <li key={idx} className={classes.ListItems}>
+                        {task.description}
+                    </li>
+            )
+        });
+
         return (
             <div className={classes.Container}>
-
                 <TaskInput 
                     onChange={(a)=> this.onKeyPressHandler(a)}
                 />
+                {taskList}
                 <div>a</div>
-                <div>a</div>
-
-                <div>a</div>
-
-                <div>a</div>
-
             </div>
         )
     }
